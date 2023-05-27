@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gontobbo/common_widgets/app_button_widget.dart';
 import 'package:gontobbo/constants/gontobbo_typography.dart';
+import 'package:gontobbo/routes/app_routes.dart';
 
 import '../../common_widgets/app_button_widget2.dart';
 
@@ -36,13 +37,17 @@ class _SelectionScreenState extends State<SelectionScreen> {
                 buttonText: 'Passenger',
                 height: 50.h,
                 width: 272.w,
-                onPressed: () {}),
+                onPressed: () {
+                  Navigator.pushNamed(context, AppRoutes.passengerLoginScreen);
+                }),
             SizedBox(height: 36.h),
             AppButtonWidget2(
                 buttonText: 'Driver',
                 height: 50.h,
                 width: 272.w,
-                onPressed: () {}),
+                onPressed: () {
+                  Navigator.pushNamed(context, AppRoutes.driverLoginScreen);
+                }),
           ],
         ),
       ),

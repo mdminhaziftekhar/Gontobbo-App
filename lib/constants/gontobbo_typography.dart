@@ -13,6 +13,15 @@ var h1BoldPrimary = GoogleFonts.montserrat(
   letterSpacing: 0.sp,
   color: const Color(0xFFF1862C),
 );
+var largeBoldBlack = GoogleFonts.montserrat(
+  fontSize: 24.sp,
+  fontWeight: FontWeight.w700,
+  //It is actually the "line-height" property in figma screen.
+  //The formula to add "line-height" in flutter is (figma line height / font size)
+  height: 29.26.h / 24.sp,
+  letterSpacing: 0.sp,
+  color: Colors.black,
+);
 var h2BoldPrimary = GoogleFonts.montserrat(
   fontSize: 18.sp,
   fontWeight: FontWeight.w700,
@@ -21,6 +30,15 @@ var h2BoldPrimary = GoogleFonts.montserrat(
   height: 21.94.h / 18.sp,
   letterSpacing: 0.sp,
   color: const Color(0xFFF1862C),
+);
+var h2BoldBlack = GoogleFonts.montserrat(
+  fontSize: 18.sp,
+  fontWeight: FontWeight.w700,
+  //It is actually the "line-height" property in figma screen.
+  //The formula to add "line-height" in flutter is (figma line height / font size)
+  height: 21.94.h / 18.sp,
+  letterSpacing: 0.sp,
+  color: Colors.black,
 );
 var bodySmall = GoogleFonts.montserrat(
     fontSize: 12.sp,
@@ -34,10 +52,35 @@ var bodySmall2 = GoogleFonts.montserrat(
     color: const Color(0xFFF1862C),
     height: 15.85.h / 13.sp,
     letterSpacing: 0.sp);
+var bodySmall2Green = GoogleFonts.montserrat(
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w500,
+    color: const Color(0xFF88DA09),
+    height: 15.85.h / 13.sp,
+    letterSpacing: 0.sp);
+var bodySmall2Black = GoogleFonts.montserrat(
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w500,
+    color: Colors.black,
+    height: 15.85.h / 13.sp,
+    letterSpacing: 0.sp);
+
+var bodySmall3Black = GoogleFonts.montserrat(
+    fontSize: 10.sp,
+    fontWeight: FontWeight.w400,
+    color: Colors.black,
+    height: 12.19.h / 10.sp,
+    letterSpacing: 0.sp);
 
 var bodyXLargeSemiBold = GoogleFonts.montserrat(
     fontSize: 18.sp,
     fontWeight: FontWeight.w600,
     color: Colors.white,
+    height: 25.h / 18.sp,
+    letterSpacing: 0.2.sp);
+var bodyXLargeSemiBoldBlack = GoogleFonts.montserrat(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w600,
+    color: Colors.black,
     height: 25.h / 18.sp,
     letterSpacing: 0.2.sp);
