@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:gontobbo/constants/gontobbo_typography.dart';
+import 'package:gontobbo/routes/app_routes.dart';
 
 import '../../common_widgets/app_button_widget.dart';
 import '../../constants/onboard_text_keys.dart';
@@ -87,7 +88,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ? () {
                 controllerCarouselSlider.nextPage();
               }
-            : () {},
+            : () {
+          Navigator.pushReplacementNamed(context, AppRoutes.selectionScreen);
+        },
       ),
     );
   }

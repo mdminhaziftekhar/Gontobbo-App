@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gontobbo/routes/app_routes.dart';
 import 'package:gontobbo/screens/onboarding/onboarding_screen.dart';
 
 void main() {
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         builder: (context, child) {
           return const MaterialApp(
+            onGenerateRoute: AppRouter.onGenerateRoute,
             debugShowCheckedModeBanner: false,
             home: OnboardingScreen(),
           );
