@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gontobbo/common_widgets/app_button_widget3.dart';
 import 'package:gontobbo/constants/gontobbo_typography.dart';
+import 'package:gontobbo/routes/app_routes.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -57,7 +58,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             SizedBox(height: 20.h),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, AppRoutes.selectRouteScreen);
+              },
               child: Container(
                 height: 78.h,
                 width: 320.w,
