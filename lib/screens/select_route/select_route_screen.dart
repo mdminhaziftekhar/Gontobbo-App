@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gontobbo/constants/gontobbo_typography.dart';
+import 'package:gontobbo/screens/available_rider/available_rider.dart';
 
 class SelectRouteScreen extends StatefulWidget {
   const SelectRouteScreen({Key? key}) : super(key: key);
@@ -13,34 +14,34 @@ class _SelectRouteScreenState extends State<SelectRouteScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        leading: InkWell(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Row(
-            children: [
-              SizedBox(
-                width: 4.w,
-              ),
-              Image.asset(
-                'assets/pngs/left_arrow.png',
-                height: 12.h,
-                width: 8.w,
-              ),
-              SizedBox(width: 4.w),
-              Text(
-                'Back',
-                style: bodySmall2,
-              )
-            ],
+      child: Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.white,
+          leading: InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Row(
+              children: [
+                SizedBox(
+                  width: 4.w,
+                ),
+                Image.asset(
+                  'assets/pngs/left_arrow.png',
+                  height: 12.h,
+                  width: 8.w,
+                ),
+                SizedBox(width: 4.w),
+                Text(
+                  'Back',
+                  style: bodySmall2,
+                )
+              ],
+            ),
           ),
         ),
-      ),
-      body: Column(
+        body: Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -51,8 +52,13 @@ class _SelectRouteScreenState extends State<SelectRouteScreen> {
                 ),
               ],
             ),
-            SizedBox(height: 8.h,),
-            Text('Please Select Your Route', style: bodySmallMediumGrey,),
+            SizedBox(
+              height: 8.h,
+            ),
+            Text(
+              'Please Select Your Route',
+              style: bodySmallMediumGrey,
+            ),
             SizedBox(height: 8.h),
             Expanded(
               child: ListView.builder(
@@ -60,7 +66,14 @@ class _SelectRouteScreenState extends State<SelectRouteScreen> {
                 itemBuilder: (context, index) {
                   return InkWell(
                     onTap: () {
-
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return AvailableRiderScreen(
+                            route: routeList[index].title,
+                            routeText: routeList[index].text,
+                          );
+                        },
+                      ));
                     },
                     child: Container(
                       height: 60.h,
@@ -68,7 +81,8 @@ class _SelectRouteScreenState extends State<SelectRouteScreen> {
                         border: Border.all(color: const Color(0xFFF1862C)),
                         borderRadius: BorderRadius.circular(15.r),
                       ),
-                      margin: EdgeInsets.symmetric(horizontal: 13.w, vertical: 10.h),
+                      margin: EdgeInsets.symmetric(
+                          horizontal: 13.w, vertical: 10.h),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [

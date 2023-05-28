@@ -70,6 +70,12 @@ var bodySmall2 = GoogleFonts.montserrat(
     color: const Color(0xFFF1862C),
     height: 15.85.h / 13.sp,
     letterSpacing: 0.sp);
+var bodySmall2White = GoogleFonts.montserrat(
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w500,
+    color: Colors.white,
+    height: 15.85.h / 13.sp,
+    letterSpacing: 0.sp);
 var bodySmall2Green = GoogleFonts.montserrat(
     fontSize: 13.sp,
     fontWeight: FontWeight.w500,
@@ -111,7 +117,7 @@ var bodyXLargeSemiBoldBlack = GoogleFonts.montserrat(
 var bodyMedium = GoogleFonts.montserrat(
     fontSize: 16.sp,
     fontWeight: FontWeight.w700,
-    color: const Color(0xFFF186f2C),
+    color: const Color(0xFFF1862C),
     height: 19.5.h / 16.sp,
     letterSpacing: 0.sp);
 var bodyMediumGreen = GoogleFonts.montserrat(
@@ -126,10 +132,22 @@ var bodySmallMediumGrey = GoogleFonts.montserrat(
     color: Colors.grey,
     height: 17.7.h / 14.sp,
     letterSpacing: 0.sp);
+var bodySmallMediumBlack = GoogleFonts.montserrat(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w700,
+    color: Colors.black,
+    height: 17.7.h / 14.sp,
+    letterSpacing: 0.sp);
 
 var bodySmallMediumWhite = GoogleFonts.montserrat(
     fontSize: 14.sp,
     fontWeight: FontWeight.w700,
     color: Colors.white,
     height: 17.7.h / 14.sp,
+    letterSpacing: 0.sp);
+var font12White = GoogleFonts.montserrat(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w600,
+    color: Colors.white,
+    height: 14.63.h / 12.sp,
     letterSpacing: 0.sp);
