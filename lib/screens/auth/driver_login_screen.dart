@@ -120,7 +120,7 @@ class _DriverLoginScreenState extends State<DriverLoginScreen> {
                   buttonText: 'Login',
                   height: 47.h,
                   onPressed: () {
-                    Navigator.pushNamed(context, AppRoutes.homeScreen);
+                    Navigator.pushNamed(context, AppRoutes.driverHomeScreen);
                   },
                 ),
                 SizedBox(

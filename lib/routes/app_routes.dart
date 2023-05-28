@@ -4,6 +4,7 @@ import 'package:gontobbo/screens/auth/driver_login_screen.dart';
 import 'package:gontobbo/screens/auth/driver_signup_screen.dart';
 import 'package:gontobbo/screens/auth/passenger_login_screen.dart';
 import 'package:gontobbo/screens/auth/passenger_signup_screen.dart';
+import 'package:gontobbo/screens/home/driver_home_screen.dart';
 import 'package:gontobbo/screens/home/home_screen.dart';
 import 'package:gontobbo/screens/selection/selection_screen.dart';
 
@@ -14,6 +15,7 @@ class AppRoutes{
   static const passengerSignupScreen = '/passenger-signup-screen';
   static const driverLoginScreen = '/driver-login-screen';
   static const driverSignupScreen = '/driver-signup-screen';
+  static const driverHomeScreen = '/driver-home-screen';
 
 }
 
@@ -48,6 +50,11 @@ class AppRouter {
      case AppRoutes.driverSignupScreen:
        return MaterialPageRoute<dynamic>(
          builder: (_) => const DriverSignupScreen(),
+         settings: settings,
+       );
+     case AppRoutes.driverHomeScreen:
+       return MaterialPageRoute<dynamic>(
+         builder: (_) => const DriverHomeScreen(),
          settings: settings,
        );
      default:
