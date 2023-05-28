@@ -126,6 +126,18 @@ var bodyMediumGreen = GoogleFonts.montserrat(
     color: const Color(0xFF88DA09),
     height: 19.5.h / 16.sp,
     letterSpacing: 0.sp);
+var bodySmallMedium = GoogleFonts.montserrat(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w700,
+    color: const Color(0xFFF1862C),
+    height: 17.7.h / 14.sp,
+    letterSpacing: 0.sp);
+var bodySmallMediumGreen = GoogleFonts.montserrat(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w700,
+    color: const Color(0xFF88DA09),
+    height: 17.7.h / 14.sp,
+    letterSpacing: 0.sp);
 var bodySmallMediumGrey = GoogleFonts.montserrat(
     fontSize: 14.sp,
     fontWeight: FontWeight.w700,

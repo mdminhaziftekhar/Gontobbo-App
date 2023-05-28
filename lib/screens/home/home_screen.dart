@@ -141,7 +141,9 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 20.h,
             ),
-            AppButtonWidget3(buttonText: 'Go To Profile', height: 31.h, onPressed: (){}),
+            AppButtonWidget3(buttonText: 'Go To Profile', height: 31.h, onPressed: (){
+              Navigator.pushNamed(context, AppRoutes.userProfile);
+            }),
           ],
         ),
       ),

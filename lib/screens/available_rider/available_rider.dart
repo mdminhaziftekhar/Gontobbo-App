@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gontobbo/screens/available_rider/ride_request_pop_up.dart';
 import 'package:gontobbo/screens/driver_information/driver_information_screen.dart';
 
 import '../../constants/gontobbo_typography.dart';
+import 'call_button_pop_up.dart';
 
 class AvailableRiderScreen extends StatefulWidget {
   const AvailableRiderScreen(
@@ -107,7 +109,18 @@ class _AvailableRiderScreenState extends State<AvailableRiderScreen> {
 
   Widget _callButton(BuildContext context, int index) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        showDialog(
+            context: context,
+            builder: (context) {
+              return AlertDialog(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30.r),
+                ),
+                content:  CallButtonPopUp(number: driverList[index].phone),
+              );
+            });
+      },
       child: Container(
         height: 37.h,
         width: 148.w,
@@ -140,7 +153,20 @@ class _AvailableRiderScreenState extends State<AvailableRiderScreen> {
 
   Widget _rideRequestButton(BuildContext context, int index) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        showDialog(
+            context: context,
+            builder: (context) {
+              return AlertDialog(
+                backgroundColor: const Color(0xFF88DA09),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30.r),
+
+                ),
+                content: const RideRequestPopUp(),
+              );
+            });
+      },
       child: Container(
         height: 37.h,
         width: 148.w,

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gontobbo/common_widgets/app_button_widget4.dart';
+import 'package:gontobbo/screens/driver_notification/driver_notification.dart';
 
 import '../../constants/gontobbo_typography.dart';
+import '../../routes/app_routes.dart';
 
 class DriverHomeScreen extends StatefulWidget {
   const DriverHomeScreen({Key? key}) : super(key: key);
@@ -59,7 +61,7 @@ class _DriverHomeScreenState extends State<DriverHomeScreen> {
                 SizedBox(height: 10.h),
                 InkWell(
                   onTap: () {
-
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => DriverNotification(),));
                   },
                   child: Container(
                     height: 60.h,
@@ -95,7 +97,9 @@ class _DriverHomeScreenState extends State<DriverHomeScreen> {
                   height: 10.h,
                 ),
 
-                AppButtonWidget4(buttonText: 'Go To Profile', height: 31.h, onPressed: (){}),
+                AppButtonWidget4(buttonText: 'Go To Profile', height: 31.h, onPressed: (){
+                  Navigator.pushNamed(context, AppRoutes.driverProfile);
+                }),
               ],
             ),
           ),
